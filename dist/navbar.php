@@ -1,8 +1,9 @@
 <?php
-require '.../connect.php';
+require '../connect.php';
 if(empty($_SESSION['username'])) {
     header('location:.../login.php');
 }
+?>
 
 <nav class="app-header navbar navbar-expand bg-body">
         <!--begin::Container-->
