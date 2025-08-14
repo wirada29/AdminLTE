@@ -1,8 +1,8 @@
 <?php
-require '../connect.php';
-if(empty($_SESSION['username'])) {
-    header('location:.../login.php');
-}
+    require '../connect.php';
+    if(empty($_SESSION['username'])){
+        header('location:../login.php');
+    }
 ?>
 
 <nav class="app-header navbar navbar-expand bg-body">
@@ -165,14 +165,10 @@ if(empty($_SESSION['username'])) {
             <!--begin::User Menu Dropdown-->
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                <img
-                  src="./assets/img/user2-160x160.jpg"
-                  class="user-image rounded-circle shadow"
-                  alt="User Image"
-                />
+                <img src="./assets/img/user2-160x160.jpg" class="user-image rounded-circle shadow" alt="User Image"/>
                 <span class="d-none d-md-inline">
                     <?php echo $_SESSION['fullname']; ?>
-                    </span>
+                </span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                 <!--begin::User Image-->

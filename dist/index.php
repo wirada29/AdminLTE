@@ -91,7 +91,41 @@
       <!--end::Sidebar-->
       <!--begin::App Main-->
       <main class="app-main">
-        
+        <?php
+        $page = isset($_GET['page']) ? $_GET['page'] : "";
+        switch($page){
+          case 'dashboard':
+          include 'dashboard.php';
+          break;
+          case 'users_list':
+            include 'users.php';
+            break;
+          case 'add_user';
+            include 'add_user.php';
+            break;
+            case 'edit_user';
+            include 'edit_user.php';
+            break;
+            case 'del_user';
+            include 'del_user.php';
+            break;
+            case 'products';
+            include 'products.php';
+            break;
+            case 'add_products';
+            include 'add_products.php';
+            break;
+            case 'edit_products';
+            include 'edit_products.php';
+            break;
+            case 'del_products';
+            include 'del_products.php';
+            break;
+          default:
+            include 'dashboard.php';
+            break;
+        }
+        ?>
       </main>
       <!--end::App Main-->
       <!--begin::Footer-->
